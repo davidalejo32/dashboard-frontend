@@ -1,0 +1,68 @@
+.ticket__container {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+
+.ticket__container:hover {
+  background-color: #3d3854;
+  transition: all ease-out 0.5s;
+
+}
+
+.ticket__item {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+
+.ticket__item {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+
+.ticket__item a{
+  color: #3496cb;
+  font-weight: bold;
+
+}
+
+.check__icon{
+  fill: #4EC21C;
+}
+
+.notification__icon{
+  size: 20;
+  fill: #C21C1C;
+  animation: bell 1s infinite;
+}
+
+/* .alert {
+  border: 1px solid;
+  border-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+  animation: spin 2.5s linear infinite;
+} 
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+ */
+
+
+@keyframes bell {
+  0% {transform: rotate(35deg);}
+  12.5% {transform: rotate(-30deg);}
+  25% {transform: rotate(25deg);}
+  37.5% {transform: rotate(-20deg);}
+  50% {transform: rotate(15deg);}
+  62.5% {transform: rotate(-10deg)}
+  75% {transform: rotate(5deg)}
+  100% {transform: rotate(0);}  
+}
