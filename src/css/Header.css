@@ -1,0 +1,54 @@
+.header__container {
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 5rem 2rem;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__container a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.header__container:hover .header__title {
+  cursor: pointer;
+  opacity: 50%;
+  transition: all 1s ease;
+}
+
+.header__container:hover .icon__helpdesk {
+  opacity: 50%;
+
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.header__title {
+  color: white;
+  text-align: center;
+  /* width: 25.5rem; */
+  animation: typing 4s steps(40) 3s  ,
+    transparent 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  /* border-right: 3px solid; */
+}
+
+@keyframes typing {
+  from {
+    width: 0px;
+  }
+}
+
+@keyframes transparent {
+  50% {
+    border-color: transparent;
+  }
+}

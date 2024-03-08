@@ -1,6 +1,6 @@
-:root{
+:root {
   --primary-color: #383854;
-  --secondary-color: #2E2E48;
+  --secondary-color: #2e2e48;
   /* --primary-text-color: #fff; */
   /* --secondary-text-color: #272727; */
   /* --error-text: #f25b61; */
@@ -12,17 +12,17 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: 'Roboto', sans-serif; 
+  font-family: "Roboto", sans-serif;
   background-color: var(--primary-color);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -30,7 +30,7 @@ li {
   list-style: none;
 }
 
-main{
+main {
   width: 90%;
   max-width: 1380px;
   margin: 4rem auto;

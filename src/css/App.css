@@ -4,3 +4,11 @@
   display: flex;
   gap: 3rem;
 }
+
+
+@media screen and (max-width: 1024px){
+  .section__table{
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -11,16 +11,21 @@ import { MdOutlineNotificationImportant } from "react-icons/md";
 
 // components
 import TableTicket from "./TableTicket";
+import Header from "./header";
 
-function TableContainer() {
+function TableContainer(props) {
+  const { title, link, data } = props
+
 
   return (
     <>
       <article className="table_container">
+      <Header title={title} link={link} />
+      <div className="table__container__div">
         <table className="table__section">
           <thead className="table__thead">
             <tr>
-              <th><MdNumbers ></MdNumbers> ID</th>
+              <th><MdNumbers></MdNumbers> ID</th>
               <th><BsCalendar2Date /> Fecha</th>
               <th><MdOutlineNotificationImportant /> Prioridad</th>
               <th><FiUsers /> Solicitante</th>
@@ -30,13 +35,19 @@ function TableContainer() {
             </tr>
           </thead>
           <tbody className="table__body">
+
+          {/* { data.map((ticket, index)=>(
+            <TableTicket status={true} />
+          )) } */}
+
+
             <TableTicket status={true}></TableTicket>
-            <TableTicket status={false} ></TableTicket>
-            <TableTicket status={false}></TableTicket>
-            <TableTicket status={false}></TableTicket>
-            <TableTicket status={false}></TableTicket>
+            <TableTicket status={true}></TableTicket>
+            <TableTicket status={true}></TableTicket>
           </tbody>
         </table>
+
+      </div>
       </article>
     </>
   );

@@ -1,16 +1,26 @@
 .table_container {
-  margin: 15rem 0rem;
   width: 50%;
   height: auto;
   padding: 3rem 1rem;
-  background-color: var(--secondary-color);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
+.table__container__div {
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 3rem 1rem;
+  margin: 5rem 0rem;
+}
 
+@media screen and (max-width: 1024px){
+  .table_container {
+    min-width: 380px;
+    width: 90%;
+  }
+}
 
 .table__thead {
-  text-indent: .5rem;
+  text-indent: 0.5rem;
   color: #f3f3f3c7;
   font-weight: 300;
   font-size: 1.3rem;
@@ -18,14 +28,11 @@
   background-color: #383854;
 }
 
-
 .table__section {
   width: 100%;
-  border-collapse:collapse; 
-
+  border-collapse: collapse;
 }
 
 .table__body {
   text-align: center;
 }
-

@@ -2,19 +2,24 @@ import "../css/TableTicket.css";
 import { CiCircleCheck } from "react-icons/ci";
 import { MdOutlineNotificationsActive } from "react-icons/md";
 
-function TableTicket(props) {
-  const { status } = props;
+function TableTicket(ticket) {
+  const { id, date, priority, status, technician, time, user, description } =
+    ticket;
   return (
     <>
-      <tr className={status == true ? "ticket__container" : "ticket__container alert"}>
+      <tr
+        className={
+          status == true ? "ticket__container" : "ticket__container alert"
+        }
+      >
         <td className="ticket__item">
-          <a href="">2423</a>
+          <a href="">{id}</a>
         </td>
-        <td className="ticket__item">06/06/2024</td>
-        <td className="ticket__item">Urgente</td>
-        <td className="ticket__item">gladys parrido</td>
-        <td className="ticket__item">david claros</td>
-        <td className="ticket_item">5h</td>
+        <td className="ticket__item">{date}</td>
+        <td className="ticket__item">{priority}</td>
+        <td className="ticket__item">{user}</td>
+        <td className="ticket__item">{technician}</td>
+        <td className="ticket_item">{time}</td>
         <td className="ticket_item">
           {status == true ? (
             <CiCircleCheck className="check__icon" size={20} />
@@ -24,6 +29,7 @@ function TableTicket(props) {
               size={20}
             />
           )}
+          <p className="ticket__desciption">{description}</p>
         </td>
       </tr>
     </>
