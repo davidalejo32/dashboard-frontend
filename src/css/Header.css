@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 14px 18px 15px -5px rgba(0, 0, 0, 0.1);
 }
 
 .header__container a {
@@ -14,31 +15,46 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-
+  animation: float 3s ease-in-out infinite;
 }
 
 .header__container:hover .header__title {
   cursor: pointer;
   opacity: 50%;
   transition: all 1s ease;
+  /* animation: none; */
 }
 
 .header__container:hover .icon__helpdesk {
   opacity: 50%;
-
   cursor: pointer;
   transition: all 1s ease;
+  /* animation: none; */
 }
 
 .header__title {
+  width: 26rem;
   color: white;
   text-align: center;
-  /* width: 25.5rem; */
-  animation: typing 4s steps(40) 3s  ,
+  animation: typing 7s steps(40) 3s infinite,
     transparent 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  /* border-right: 3px solid; */
+}
+
+@keyframes float {
+  0% {
+    /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+    transform: translatey(0px);
+  }
+  50% {
+    /* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+    transform: translatey(-10px);
+  }
+  100% {
+    /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+    transform: translatey(0px);
+  }
 }
 
 @keyframes typing {

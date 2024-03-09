@@ -1,10 +1,13 @@
 import "../css/TableTicket.css";
+import { formatDate } from "../libs/formatDate";
+
 import { CiCircleCheck } from "react-icons/ci";
 import { MdOutlineNotificationsActive } from "react-icons/md";
 
-function TableTicket(ticket) {
-  const { id, date, priority, status, technician, time, user, description } =
-    ticket;
+function TableTicket(props) {
+  const { id, date, priority, user, description, technician, time, status} = props.props
+
+  const newDate = formatDate(date)
   return (
     <>
       <tr
@@ -13,9 +16,9 @@ function TableTicket(ticket) {
         }
       >
         <td className="ticket__item">
-          <a href="">{id}</a>
+          <a href={`${props.linkTicket}=${id}`} target="_blank">{id}</a>
         </td>
-        <td className="ticket__item">{date}</td>
+        <td className="ticket__item">{newDate}</td>
         <td className="ticket__item">{priority}</td>
         <td className="ticket__item">{user}</td>
         <td className="ticket__item">{technician}</td>

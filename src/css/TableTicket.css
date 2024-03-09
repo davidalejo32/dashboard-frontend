@@ -4,7 +4,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.075);
   position: relative;
 }
-
 .ticket__container:hover {
   background-color: #3d3854;
   transition: all ease-out 0.5s;
@@ -37,34 +36,36 @@
   cursor: pointer;
 }
 
-.notification__icon:hover + .ticket__desciption {
-  opacity: 1;
-}
-
-.check__icon:hover + .ticket__desciption {
-  opacity: 1;
-}
-
-.alert {
-  animation: spin 1s infinite ease;
-}
-
 .ticket__desciption {
   width: 30rem;
   height: auto;
-  top: -50%;
+  top: -60%;
   right: 4rem;
   padding: 2rem;
   text-align: justify;
   border-radius: 1rem;
   position: absolute;
   background-color: #ffffff;
-  color: #2e2e48;
+  color: var(--secondary-color);
   z-index: 5;
   opacity: 0;
   font-size: 1.6rem;
   transition: all ease 0.8s;
   pointer-events: none;
+}
+
+.notification__icon:hover + .ticket__desciption {
+  opacity: 1;
+  z-index: 5;
+}
+
+.check__icon:hover + .ticket__desciption {
+  opacity: 1;
+  z-index: 5;
+}
+
+.alert {
+  animation: spin 1s infinite ease;
 }
 
 @keyframes spin {

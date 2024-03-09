@@ -3,11 +3,20 @@
   width: 100%;
   display: flex;
   gap: 3rem;
+  overflow: hidden;
+  z-index: 1;
 }
 
+.technicia__section {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  z-index: -1;
+}
 
-@media screen and (max-width: 1024px){
-  .section__table{
+@media screen and (max-width: 1300px) {
+  .section__table {
     flex-direction: column;
     align-items: center;
   }

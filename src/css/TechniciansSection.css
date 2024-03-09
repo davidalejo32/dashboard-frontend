@@ -1,0 +1,91 @@
+.technician__container {
+  min-width: 380px;
+  padding: 3rem 2rem;
+  margin: 0 1rem 8rem 0;
+  background-color: var(--secondary-color);
+  border-radius: 0.8rem;
+  box-shadow: 14px 18px 15px -5px rgba(0, 0, 0, 0.1);
+}
+
+.technician__title {
+  font-size: 2.5rem;
+  color: var(--secondary-text-color);
+}
+
+.technician__table__container {
+  margin-top: 2rem;
+}
+
+.technician__table {
+  min-width: 32rem;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.technician__table thead {
+  font-size: 1.3rem;
+  color: var(--secondary-text-color);
+  height: 8rem;
+}
+
+.technician__table thead tr th:nth-child(1) {
+  text-align: start;
+  width: 2rem;
+}
+
+.technician__table thead tr th:nth-child(2) {
+  text-align: start;
+  width: 5rem;
+}
+
+.technician__table thead tr th:nth-child(3) {
+  text-align: start;
+  text-indent: 2rem;
+  width: 5rem;
+}
+
+.technician__table tbody tr {
+  height: 3rem;
+  font-size: 1.4rem;
+}
+
+.technician__table tbody tr:hover {
+  background-color: #3d3854;
+  transition: all ease 0.3s;
+}
+
+.technician__table tbody tr td:nth-child(3) {
+  /* text-align: center; */
+  text-indent: 5rem;
+  width: 5rem;
+}
+
+.technician__table td {
+  color: white;
+}
+
+.technician__resume {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 4rem 0 0 0;
+  color: var(--secondary-text-color);
+  align-self: self-start;
+}
+
+.technician__resume span {
+  color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  .technician__table__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .technician__table {
+    min-width: 32rem;
+    width: 90%;
+  }
+}
