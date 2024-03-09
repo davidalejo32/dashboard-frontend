@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 import { getTicketsNeps, getTechniciansNeps } from "./api/neps";
 import { getTicketsACS, getTechniciansACS } from "./api/acs";
 
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+import favicon from '/favicon.png'
 import "./css/App.css";
 import TableContainer from "./components/TableContainer";
 import TechniciansSection from "./components/TechniciansSection";
