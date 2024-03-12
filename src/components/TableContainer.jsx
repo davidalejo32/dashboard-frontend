@@ -1,5 +1,6 @@
 // css
 import "../css/TableContainer.css";
+
 // icons
 import { BsCalendar2Date } from "react-icons/bs";
 import { FiUsers } from "react-icons/fi";
@@ -13,7 +14,7 @@ import TableTicket from "./TableTicket";
 import Header from "./header";
 
 function TableContainer(props) {
-  const { title, link, linkTicket, data} = props;
+  const { title, link, linkTicket, data } = props;
   return (
     <>
       <article className="table_container">
@@ -45,9 +46,12 @@ function TableContainer(props) {
             </thead>
             <tbody className="table__body">
               {data.map((data, index) => (
-                <TableTicket props={data} key={index} linkTicket={linkTicket}></TableTicket>
+                <TableTicket
+                  props={data}
+                  key={index}
+                  linkTicket={linkTicket}
+                ></TableTicket>
               ))}
-
             </tbody>
           </table>
         </div>

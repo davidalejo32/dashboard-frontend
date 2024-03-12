@@ -4,15 +4,12 @@ import "../css/TechniciansSection.css";
 // libs
 import { unifyAndSum } from "../libs/unifiedCases";
 
-// icons
-import { LuUser2 } from "react-icons/lu";
-import { MdOutlineSupport } from "react-icons/md";
+// components
+import { TechnicianTable } from "./TechnicianTable";
+import { TotalCases } from "./TotalCases";
 
-
-function TechniciansSection(props) {
-
-
-  const { techniciansAcs, techniciansNeps } = props;
+export function TechniciansSection(props) {
+  const { technicians, techniciansAcs, techniciansNeps } = props;
 
   const techniciansUnified = unifyAndSum(techniciansAcs, techniciansNeps);
 
@@ -27,33 +24,19 @@ function TechniciansSection(props) {
     }
   }, 0);
 
-
   return (
     <>
       <div className="technician__container">
         <h2 className="technician__title">Resumen</h2>
         <div className="technician__table__container">
-          <table className="technician__table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th><LuUser2/> Tecnico</th>
-                <th>Casos Resueltos</th>
-              </tr>
-            </thead>
-            <tbody>
-              {techniciansUnified.map((tech, index) => (
-                <tr>
-                  <td>{index + 1}</td>
-                  <td>{tech.name}</td>
-                  <td>{tech.cases}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <p className="technician__resume">
-            <MdOutlineSupport size={25}/> Total Casos: <span>{totalCases}</span>
-          </p>
+          {technicians === true ? (
+            <>
+              <TechnicianTable techniciansUnified={techniciansUnified} />
+              <TotalCases totalCases={totalCases} />
+            </>
+          ) : (
+            <TotalCases totalCases={totalCases} />
+          )}
         </div>
       </div>
     </>

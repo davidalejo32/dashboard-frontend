@@ -5,9 +5,9 @@ import { CiCircleCheck } from "react-icons/ci";
 import { MdOutlineNotificationsActive } from "react-icons/md";
 
 function TableTicket(props) {
-  const { id, date, priority, user, description, technician, time, status} = props.props
+  const { id, date, priority, user, description, technician, time, status } = props.props;
 
-  const newDate = formatDate(date)
+  const newDate = formatDate(date);
   return (
     <>
       <tr
@@ -16,7 +16,9 @@ function TableTicket(props) {
         }
       >
         <td className="ticket__item">
-          <a href={`${props.linkTicket}=${id}`} target="_blank">{id}</a>
+          <a href={`${props.linkTicket}=${id}`} target="_blank">
+            {id}
+          </a>
         </td>
         <td className="ticket__item">{newDate}</td>
         <td className="ticket__item">{priority}</td>

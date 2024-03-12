@@ -6,3 +6,4 @@ export const getTicketsNeps = () => axios.get(`${API}/neps/tickets`)
 export const getTechniciansNeps = () => axios.get(`${API}/neps/technicians`)
 
 
+

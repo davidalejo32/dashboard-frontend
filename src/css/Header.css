@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  animation: float 3s ease-in-out infinite;
+  /* animation: float 3s ease-in-out infinite; */
 }
 
 .header__container:hover .header__title {

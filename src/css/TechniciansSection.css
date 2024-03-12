@@ -49,6 +49,10 @@
   font-size: 1.4rem;
 }
 
+.technician__table tbody tr:first-child {
+  background-color: #3d3854;
+}
+
 .technician__table tbody tr:hover {
   background-color: #3d3854;
   transition: all ease 0.3s;
@@ -74,9 +78,8 @@
   align-self: self-start;
   background-color: var(--third-color);
   padding: 1.5rem;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   box-shadow: 14px 18px 15px -5px rgba(0, 0, 0, 0.1);
-
 }
 
 .technician__resume span {
